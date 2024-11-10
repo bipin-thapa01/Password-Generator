@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body class="p-0 m-0 bg-stone-900 text-white">
+  <nav class="border-b-2 py-2 px-4 flex justify-between items-center">
+    <div class="flex sm:flex-row flex-col  sm:items-center gap-x-1 sm:gap-x-2">
+      <div class="text-xl sm:text-3xl">Password Generator</div>
+      <div class="sm:text-xs text-end h-2 text-xsm">by Bipin</div>
+    </div>
+    <div class="flex gap-x-4 items-center ">
+      <a href="https://github.com/bipin-thapa01" target="_blank"><i
+          class="fa-brands fa-github sm:text-2xl text-lg"></i></a>
+      <div class="hidden sm:block"><a href="https://github.com/bipin-thapa01" target="_blank"
+          class="sm:w-4 w-2">Github</a></div>
+    </div>
+    <div class="flex gap-x-4 items-center ">
+      <a href="https://www.facebook.com/bipin.thapasingh/" target="_blank"><i
+          class="fa-brands fa-facebook sm:text-2xl text-lg"></i></a>
+      <div class="hidden sm:block"><a href="https://www.facebook.com/bipin.thapasingh/" target="_blank"
+          class="sm:w-4 w-2">Facebook</a></div>
+    </div>
+  </nav>
+  <div class="absolute top-32 sm:top-60 w-screen sm:h-72 h-auto flex justify-center ">
+    <div class="flex flex-col gap-y-7 items-center border-2 p-3 rounded-md sm:w-auto w-80">
+      <div class="flex sm:flex-row flex-col gap-y-1 sm:gap-x-7 items-center border-b-2 pb-2">
+        <label for="password-length">Password Length:</label>
+        <input type="text" id="password-length" placeholder="Enter Required Length" autocomplete="off"
+          class="text-black rounded-md p-2 pass-length">
+      </div>
+      <button
+        class="bg-white text-stone-950 rounded border-2 w-40 h-10 hover:bg-gray-400 hover:border-gray-400 text-center"
+        id="generate">Generate
+        Password</button>
+      <div class="flex flex-col gap-y-10 ">
+        <label for="password" class="text-center">Generated Password:</label>
+        <div class="flex flex-col sm:flex-row gap-y-2 sm:gap-x-2">
+          <input type="password" id="password" class="text-black sm:w-96 w-72 h-10 rounded border-0 p-1 text-xsm sm:text-sm" readonly>
+          <div
+            class="rounded flex gap-x-2 items-center justify-center hover:cursor-pointer border-0 relative">
+            <div class="w-9 bg-white flex items-center justify-center h-9 rounded group hover:bg-gray-500" id="clipboard"> 
+              <i class="fa-solid fa-clipboard text-2xl text-black hidden"></i>
+              <p class="bg-purple-950 w-44 absolute top-14 text-center border-purple-700 border-2 rounded font-semibold hidden group-hover:block brightness-75">
+                Copy to Clipboard</p>
+            </div>
+            <div class="w-9 bg-white flex items-center justify-center h-9 rounded hover:bg-gray-500 group">
+              <i class="fa-solid fa-eye-slash text-2xl text-black show-hide"></i>
+              <p class="bg-purple-950 w-44 absolute top-14 text-center border-purple-700 border-2 rounded font-semibold hidden group-hover:block brightness-75">
+                Show/Hide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
